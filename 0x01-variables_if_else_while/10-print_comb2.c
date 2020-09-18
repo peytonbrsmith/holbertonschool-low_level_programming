@@ -12,7 +12,7 @@ int main(void)
 	{
 		putchar(counter / 10 + 48);
 		putchar(counter % 10 + 48);
-		if (counter < 100)
+		if (counter < 99)
 		{
 			putchar(',');
 			putchar(' ');
