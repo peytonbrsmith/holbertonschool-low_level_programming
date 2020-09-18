@@ -1,24 +1,23 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - entry point
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int counter = 0;
+	char num = 48;
 
-	while (counter < 100)
+	while (num < 58)
 	{
-		putchar(counter / 10 + 48);
-		putchar(counter % 10 + 48);
-		if (counter < 100)
+		putchar(num);
+		if (num < 57)
 		{
 			putchar(',');
 			putchar(' ');
 		}
-		counter++;
+		num++;
 	}
 	putchar(10);
-	return (0);
+return (0);
 }
