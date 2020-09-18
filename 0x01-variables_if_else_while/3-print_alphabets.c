@@ -13,9 +13,7 @@ int main(void)
 		putchar(alphabet);
 		alphabet++;
 	}
-
 	alphabet = 65;
-
 	while (alphabet < 90)
 	{
 		putchar(alphabet);
