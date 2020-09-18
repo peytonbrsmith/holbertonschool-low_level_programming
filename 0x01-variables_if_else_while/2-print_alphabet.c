@@ -13,5 +13,6 @@ int main(void)
 		putchar(alphabet);
 		alphabet++;
 	}
+	putchar(10);
 	return (0);
 }
