@@ -27,5 +27,7 @@ int main(void)
 	hol = 'n';
 	_putchar(hol);
 	_putchar(10);
+
+	return (0);
 }
 
