@@ -27,5 +27,7 @@ int print_last_digit(int a);
 
 void print_to_98(int n);
 
+int add(int a, int b);
+
 #endif /* _HOLBERTON_H_ */
 
