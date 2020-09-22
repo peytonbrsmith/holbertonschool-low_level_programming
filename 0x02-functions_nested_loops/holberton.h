@@ -29,5 +29,7 @@ void print_to_98(int n);
 
 int add(int a, int b);
 
+void jack_bauer(void);
+
 #endif /* _HOLBERTON_H_ */
 
