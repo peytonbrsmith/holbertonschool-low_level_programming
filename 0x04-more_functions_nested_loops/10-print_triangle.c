@@ -19,9 +19,7 @@ void print_triangle(int size)
 				_putchar(' ');
 			for (p = 0; p < y; p++)
 				_putchar('#');
-
 			_putchar('\n');
-
 		}
 	}
 	else if (size == 1)
