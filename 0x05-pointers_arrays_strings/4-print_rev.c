@@ -2,7 +2,7 @@
 
 /**
  * print_rev - puts a string to stdout reversed
- * @str: the string
+ * @s: the string
  *
  * Return: void
  */
