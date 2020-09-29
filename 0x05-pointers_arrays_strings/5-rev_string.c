@@ -15,9 +15,9 @@ void rev_string(char *s)
 
 	while (*(s + len) != '\0')
 		len++;
+	len--;
 
-
-	for (up = 0, down = (len - 1); up < len; up++, down--)
+	for (up = 0, down = len; up <= len; up++, down--)
 	{
 		*(temps + down) = *(s + up);
 	}
