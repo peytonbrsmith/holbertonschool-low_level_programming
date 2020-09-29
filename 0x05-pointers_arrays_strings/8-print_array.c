@@ -10,7 +10,9 @@
  */
 void print_array(int *a, int n)
 {
-	for (int i = 0; n >= 1; n--, i++)
+	int i = 0;
+
+	for (n--; n >= 1; n--, i++)
 	{
 		printf("%d", *(a + i));
 		if (n > 1)
