@@ -1,8 +1,9 @@
 #include "holberton.h"
 
 /**
- * rev_string - puts a string to stdout reversed
- * @s: the string
+ * reverse_array - puts a string to stdout reversed
+ * @a: the array
+ * @n: the size of the array
  *
  * Return: void
  */
