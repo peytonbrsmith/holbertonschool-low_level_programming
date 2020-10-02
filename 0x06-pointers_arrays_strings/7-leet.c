@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
- * rot13 - check the code for Holberton School students.
+ * leet - 1337 encoding
  * @s: the string passed
  *
  * Return: the string pointer.
  */
 
-char *rot13(char *s)
+char *leet(char *s)
 {
 	int x;
 	char *og = "aAeEoOtTlL";
