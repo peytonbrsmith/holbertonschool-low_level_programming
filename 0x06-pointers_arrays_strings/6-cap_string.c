@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * string_toupper - convers lowercase string characters to upper
+ * cap_string - capitalizes the letters after delimeters
  * @s: the string
  *
  * Return: string.
@@ -10,18 +10,27 @@
 char *cap_string(char *s)
 {
 	int x = 0;
+	int y = 1;
+	char *returnptr = s;
+	char *del = "\t\n;. ,!?\"(){}\0";
 
-	while (s[x] != '\0')
+	while (*s)
 	{
-		if(s[x] >= 97 && s[x] <= 122)
+		if (y == 1)
 		{
-			if (s[x-1] >= 32 && s[x-1] <= 34)
-				*(s + x) = s[x] - 32;
-			else if ((s[x-1] >= 39) && (s[x-1] <= 41))
-				*(s + x) = s[x] - 32;
-
+			if (*s >= 'a' && *s <= 'z')
+			{
+				*s -= 32;
+			}
+			y = 0;
 		}
-		x++;
+
+		for (x = 0; del[x]; x++)
+		{
+			if (*s == del[x])
+				y = 1;
+		}
+		s++;
 	}
-	return (s);
+	return (returnptr);
 }
