@@ -12,6 +12,9 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int o = 0;
 	int i;
 
+	if (*s == '\0')
+		return (0);
+
 	while (*accept)
 	{
 		for (i = 0; s[i] != ','; i++)
