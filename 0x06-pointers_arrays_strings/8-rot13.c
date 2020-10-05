@@ -9,20 +9,24 @@
 
 char *rot13(char *s)
 {
-	int x = 0, y = 0;
-	char ta[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMabcdefghijklmnopqrstuvwxyzabcdefghijklm";
+	int x;
+	char *ta = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *rot = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char *rtn = s;
 
-	while (*(s + x) != '\0')
+	while (*s)
 	{
-		while (ta[y] != '\0')
+		x = 0;
+		while (ta[x])
 		{
-			if (*(s + x) == *(ta + y))
+			if (*s == ta[x])
 			{
-				*(s + x) = *(ta + (y + 13));
+				*s = rot[x];
+				break;
 			}
-			y++;
+			x++;
 		}
-		x++;
+		s++;
 	}
-    return (s);
+	return (rtn);
 }

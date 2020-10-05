@@ -1,18 +1,32 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
- * leet - encodes into 1337
- * @s: passed string
+ * leet - 1337 encoding
+ * @s: the string passed
  *
- * Return: char pointer
+ * Return: the string pointer.
  */
+
 char *leet(char *s)
 {
-	while (s[x] != '\0')
+	int x;
+	char *og = "aAeEoOtTlL";
+	char *coded = "4433007711";
+	char *rtn = s;
+
+	while (*s)
 	{
-		
-		x++;
+		x = 0;
+		while (og[x])
+		{
+			if (*s == og[x])
+			{
+				*s = coded[x];
+				break;
+			}
+			x++;
+		}
+		s++;
 	}
-    return (s);
+	return (rtn);
 }
