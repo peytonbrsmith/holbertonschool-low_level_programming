@@ -9,14 +9,16 @@
 
 int _sqrt_recursion(int n)
 {
-	if (n > 1)
-	{
-		if (n % _sqrt_recursion(n - 1) == 0)
-		{
-			if (((_sqrt_recursion(n)) * (_sqrt_recursion(n))) == n)
-			return (n);
-		}
-		n--;
-	}
-	return (_sqrt_recursion(n));
+	int x = 0;
+
+	return (findsq(n, x));
+}
+
+int findsq(int n, int x)
+{
+	if ((x * x) > n)
+		return (-1);
+	if ((x * x) == n)
+		return (x);
+	return (findsq(n, (x + 1)));
 }
