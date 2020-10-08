@@ -23,4 +23,6 @@ int findsq(int n, int x);
 
 int findprime(int n, int x);
 
+int wildcmp(char *s1, char *s2);
+
 #endif /* HOLBERTON_H */
