@@ -21,4 +21,6 @@ int is_palindrome(char *s);
 
 int findsq(int n, int x);
 
+int findprime(int n, int x);
+
 #endif /* HOLBERTON_H */
