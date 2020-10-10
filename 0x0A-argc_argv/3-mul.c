@@ -1,17 +1,22 @@
 #include "holberton.h"
 
 /**
- * main - prints argument count
+ * main - multiples arguments
  * @argc: argument count
  * @argv: pointer to arguments passed
  *
- * return: void
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
+	if (argc == 1)
+	{
+		printf("Error\n");
+		return (1);
+	}
 	int mul;
 
-	mul = atoi(argv[argc - 2]) * atoi(argv[argc -1]);
+	mul = atoi(argv[argc - 2]) * atoi(argv[argc - 1]);
 	printf("%d\n", mul);
 	return (0);
 }
