@@ -1,34 +1,36 @@
 #include "holberton.h"
 
 /**
- * main - prints argument count
+ * main - adds arguments together
  * @argc: argument count
  * @argv: pointer to arguments passed
  *
- * return: void
+ * Return: 0 if success, 1 if fail
  */
 int main(int argc, char *argv[])
 {
-        int i;
-/*
-	for (i = 0; i < argc; i++)
+	int i;
+	int sum = 0;
+
+	if (argc < 2)
 	{
-		if (isdigit(argv[i]) == 0)
+		printf("0\n");
+		return (0);
+	}
+	for (i = 1; i < argc; i++)
+	{
+		if (isdigit(*argv[i]) == 0)
 		{
 			printf("Error\n");
 			return (1);
 		}
 	}
-*/
-	while (*argv)
+	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(argv) == 0)
-		{
-			printf("Error\n");
-			return (1);
-		}
-		argv++;
+		sum = sum + atoi(argv[i]);
 	}
-	printf("They are all ints");
+
+	printf("%d\n", sum);
+
 	return (0);
 }
