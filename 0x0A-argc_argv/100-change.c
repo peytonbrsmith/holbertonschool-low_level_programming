@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 			chng = chng - 5;
 		else if (chng >= 2)
 			chng = chng - 2;
-		else if (chng >= 1)
+		else
 			chng = chng - 1;
 		coins++;
 	}
