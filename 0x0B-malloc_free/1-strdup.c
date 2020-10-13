@@ -6,7 +6,7 @@
  *
  * Return: pointer to array or null
  */
-char *_strdup(__attribute__ ((unused)) char *str)
+char *_strdup(char *str)
 {
 	char *ar;
 	unsigned int i, size;
