@@ -12,13 +12,12 @@ char *_strdup(__attribute__ ((unused)) char *str)
 	unsigned int i, size;
 
 	if (str[0] == '\0')
-		return ('\0');
-
+		return (NULL);
 	for (size = 0; *(str + size) != '\0'; size++)
 		;
-
 	ar = malloc(size * sizeof(char));
-
+	if (ar == NULL)
+		return (NULL);
 	for (i = 0; i < size; i++)
 	{
 		ar[i] = str[i];
