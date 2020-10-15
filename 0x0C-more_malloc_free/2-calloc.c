@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
+ * _calloc - allocates space and inits to 0
+ * @nmemb: # of members
+ * @size: size in bytes of each member
  *
- * Return: Nothing.
+ * Return: pointer to array or null
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
@@ -19,10 +19,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	ar = (int *) malloc(i);
 	if (ar == NULL)
 		return (NULL);
-	for (i = 0; i < (nmemb * size); i++)
-	{
-		ar[i] = 0;
-     	}
-
 	return (ar);
 }
