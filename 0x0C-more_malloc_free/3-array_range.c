@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-  * array_range  creates an array of integers
+  * array_range - creates an array of integers
   * @min: min value
   * @max: max value
   *
