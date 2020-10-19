@@ -26,9 +26,12 @@ char *_strdup(char *str)
 	return (ar);
 }
 /**
- * main - check the code for Holberton School students.
+ * new_dog - creates a new dog struct
+ * @name: new name of the dog
+ * @age: new age
+ * @owner: new name of owner
  *
- * Return: Always 0.
+ * Return: pointer to new dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -40,19 +43,20 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (dog == NULL)
 		return (NULL);
 	newname = _strdup(name);
-	if (newname == NULL)
+	dog->name = newname;
+	if (dog->name == NULL)
 	{
-		free(newname);
+		free(dog);
 		return (NULL);
 	}
 	newowner = _strdup(owner);
-	if (newowner == NULL)
-        {
-                free(newowner);
-                return (NULL);
-        }
-	dog->name = newname;
-	dog->age = age;
 	dog->owner = newowner;
+	if (dog->owner == NULL)
+	{
+		free(dog->name);
+		free(dog);
+		return (NULL);
+	}
+	dog->age = age;
 	return (dog);
 }
