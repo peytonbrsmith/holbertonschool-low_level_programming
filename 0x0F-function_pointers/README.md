@@ -15,7 +15,3 @@ Write a function that searches for an integer.
 ***
 Write a program that performs simple operations.
 
-## 4. Most hackers are young because young people tend to be adaptable. As long as you remain adaptable, you can always be a good hacker
-***
-Write a program that prints the 
-
