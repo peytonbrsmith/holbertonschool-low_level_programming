@@ -4,7 +4,11 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+ * struct typ - types of data and their function
+ * @ltr: the type of data
+ * @type: pointer to function for type
+ */
 typedef struct typ
 {
 	char *ltr;
