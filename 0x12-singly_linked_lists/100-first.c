@@ -1,6 +1,5 @@
 #include <stdio.h>
-void beforeMain(void);
-void __attribute__ ((constructor)) beforeMain(void);
+void beforeMain(void) __attribute__ ((constructor));
 /**
  * beforeMain - executes code before main
  */
