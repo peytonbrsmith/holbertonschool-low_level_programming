@@ -10,8 +10,6 @@ size_t print_list(const list_t *h)
 	int ret = 0;
 	list_t *temp;
 
-	if (h->next == NULL)
-		return (0);
 	temp = (list_t *)h;
 	if (temp->str == NULL)
 	{
