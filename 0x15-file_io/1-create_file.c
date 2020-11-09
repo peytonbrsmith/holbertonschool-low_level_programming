@@ -3,7 +3,7 @@
  * create_file - creates a file of filename with content text_content
  * @filename: pointer to filename/path
  * @text_content: the content to be printed
- * Return: the number of letters successfully read AND printed
+ * Return: 1 on Success or -1 on fail
  */
 int create_file(const char *filename, char *text_content)
 {
