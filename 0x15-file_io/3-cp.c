@@ -21,13 +21,13 @@ int main(int ac, char **a)
 
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: %s file_from file_to\n", a[0]);
+		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", a[0]);
 		exit(97);
 	}
 	fd1 = open(a[1], O_RDONLY);
 	if (fd1 == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", a[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", a[1]);
 		exit(98);
 	}
 	fd2 = open(a[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
@@ -45,7 +45,7 @@ if (wr == -1)
 dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", a[2]);
 exit(99);
 }
-	}
+}
 	cl = close(fd1);
 	if (cl == -1)
 		clos(fd1);
