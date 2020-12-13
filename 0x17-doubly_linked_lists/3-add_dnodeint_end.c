@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * add_dnodeint - adds nodes to a linked list of integers
+ * add_dnodeint_end - adds nodes to a linked list of integers
  * @head: pointer to the head
  * @n: integer
  *
