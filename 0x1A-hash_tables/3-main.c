@@ -17,6 +17,9 @@ int main(void)
         ht = hash_table_create(1024);
         hash_table_set(ht, "betty", "");
         hash_table_set(ht, "hetairas", "hetairas");
+	if (hash_table_set(ht, "", "hetairas") == 0)
+		printf("Key can't be empty string\n");
+	hash_table_set(ht, "europa", "");
         hash_table_set(ht, "mentioner", "mentioner");
         hash_table_set(ht, "heliotropes", "heliotropes");
         hash_table_set(ht, "neurospora", "neurospora");
