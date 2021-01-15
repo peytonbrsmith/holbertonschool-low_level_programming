@@ -1,36 +1,45 @@
 #include "hash_tables.h"
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always EXIT_SUCCESS.
+ * hash_table_set - sets a key in the hash table with a value
+ * @ht: hash table
+ * @key: the key
+ * @value: the value for the key
+ * Return: 1 on success, 0 on fail
  */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int index = key_index((const unsigned char*)key, ht->size);
-	hash_node_t *new_node;
+	unsigned long int index = key_index((const unsigned char *)key, ht->size);
+	hash_node_t *new_node, *next;
+
+	new_node = malloc(sizeof(hash_node_t));
+	if (new_node == NULL)
+	{
+		return (0);
+	}
+	new_node->key = (char *)key;
+	new_node->value = (char *)value;
+	new_node->next = NULL;
 
 	if (ht->array[index] == NULL)
 	{
-		new_node = malloc(sizeof(hash_node_t));
-		new_node->key = (char*)key;
-		new_node->value = (char*)value;
-		new_node->next = NULL;
 		ht->array[index] = new_node;
 		return (1);
 	}
-	else
+	next = ht->array[index];
+	while (next != NULL)
 	{
-		while (ht->array[index]->next != NULL)
+		if (strcmp(next->key, key) == 0)
 		{
-			ht->array[index]->next = ht->array[index]->next;
+			next->value = (char *)value;
+			return (1);
 		}
-		new_node = malloc(sizeof(hash_node_t));
-		new_node->key = (char*)key;
-		new_node->value = (char*)value;
-		new_node->next = NULL;
-		ht->array[index]->next = new_node;
-		return (1);
+		else
+		{
+			next = next->next;
+		}
 	}
-	return (0);
+	new_node->next = ht->array[index];
+	ht->array[index] = new_node;
+	return (1);
 }

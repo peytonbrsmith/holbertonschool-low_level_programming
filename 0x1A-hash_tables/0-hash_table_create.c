@@ -5,7 +5,7 @@
  * @size: the size of the array
  *
  * Return: pointer to the table
- * */
+ */
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *new_table;
@@ -18,7 +18,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	}
 	new_table->size = size;
-	new_array = malloc(sizeof(hash_node_t*) * size);
+	new_array = malloc(sizeof(hash_node_t *) * size);
 	if (new_array == NULL)
 	{
 		return (NULL);
