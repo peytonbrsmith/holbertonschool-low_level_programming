@@ -33,12 +33,17 @@ int binary_search(int *array, size_t size, int value)
 {
 	size_t m, l, r;
 
+	if (array == NULL)
+	{
+		return (-1);
+	}
+	
 	l = 0;
 	r = size - 1;
 
 	print_array(array, size, 0);
 
-	while (l <= r && array != NULL)
+	while (l <= r)
 	{
 		m = (l + r) / 2;
 
