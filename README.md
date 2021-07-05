@@ -12,7 +12,7 @@ Project Requirements vary project by project, but a general set is as follows:
 
 ## Requirements
 
-### Python Scripts
+### General
 
 - Allowed editors: `vi`, `vim`, `emacs`
 - All your files will be compiled on Ubuntu 14.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic
